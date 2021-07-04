@@ -56,6 +56,17 @@
                         </p>
                     </a>
                 </li>
+
+                <!-- On boarding -->
+                <li class="nav-item">
+                    <a href="{{ route('on_boarding') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            On boarding
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
