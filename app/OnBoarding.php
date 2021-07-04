@@ -12,5 +12,7 @@ class OnBoarding extends Model
         'url'
     ];
 
+    protected $hidden = ['created_at', 'updated_at', 'show'];
+
     protected $table = 'on_boarding';
 }
