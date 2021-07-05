@@ -26,4 +26,5 @@ Route::get('on-boarding', 'OnBoardingController@getAllOnBoarding');
 
 /// START: Playlists
 Route::get('playlists-featured', 'PlaylistController@getPlaylistsFeatured');
+Route::get('playlists-hot', 'PlaylistController@getPlaylistsHot');
 /// END: Playlists
