@@ -29,3 +29,24 @@ Route::get('/admin/sings', function () {
         "title" => 'Sings'
     ]);
 })->name('sings');
+
+/// Start: On boarding
+Route::get('/admin/on-boarding', function () {
+    return view('admin.on_boarding', [
+        "title" => 'On boarding'
+    ]);
+})->name('on_boarding');
+
+
+Route::post('create-on-boarding', 'OnBoardingController@create');
+/// End: On Boarding
+
+/// START: Playlists
+Route::get('/admin/playlists', function () {
+    return view('admin.playlist', [
+        'title' => 'Playlists'
+    ]);
+})->name('playlists');
+
+Route::post('/create-playlist', 'PlaylistController@create');
+/// END: Playlists
