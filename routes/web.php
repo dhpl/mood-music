@@ -40,3 +40,13 @@ Route::get('/admin/on-boarding', function () {
 
 Route::post('create-on-boarding', 'OnBoardingController@create');
 /// End: On Boarding
+
+/// START: Playlists
+Route::get('/admin/playlists', function () {
+    return view('admin.playlist', [
+        'title' => 'Playlists'
+    ]);
+})->name('playlists');
+
+Route::post('/create-playlist', 'PlaylistController@create');
+/// END: Playlists

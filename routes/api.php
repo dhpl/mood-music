@@ -18,4 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/// START: On Boarding
 Route::get('on-boarding', 'OnBoardingController@getAllOnBoarding');
+/// END: On Boarding
+
+
+
+/// START: Playlists
+Route::get('playlists-featured', 'PlaylistController@getPlaylistsFeatured');
+/// END: Playlists

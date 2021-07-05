@@ -36,15 +36,15 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <!-- Albums -->
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('albums') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Albums
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                    Albums
+                    <span class="right badge badge-danger">New</span>
+                </p>
+                </a>
+                </li> --}}
 
                 <!-- Sings -->
                 <li class="nav-item">
@@ -63,6 +63,17 @@
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             On boarding
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+
+                <!-- Playlist -->
+                <li class="nav-item">
+                    <a href="{{ route('playlists') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Playlists
                             <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
