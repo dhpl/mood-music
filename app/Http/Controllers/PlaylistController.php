@@ -40,4 +40,22 @@ class PlaylistController extends Controller
             'data' => Playlist::all()
         ]);
     }
+
+    function getPlaylistsForYou()
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'Get Playlists For You Success!!',
+            'data' => Playlist::all()
+        ]);
+    }
+
+    function getPlaylistsPopular()
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'Get Playlists Popular Success!!',
+            'data' => Playlist::all()
+        ]);
+    }
 }
