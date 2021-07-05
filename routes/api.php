@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('get-all-on-boarding', 'OnBoardingController@getAllOnBoarding');
+Route::get('on-boarding', 'OnBoardingController@getAllOnBoarding');
