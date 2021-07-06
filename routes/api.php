@@ -30,3 +30,7 @@ Route::get('playlists-hot', 'PlaylistController@getPlaylistsHot');
 Route::get('playlists-for-you', 'PlaylistController@getPlaylistsForYou');
 Route::get('playlists-popular', 'PlaylistController@getPlaylistsPopular');
 /// END: Playlists
+
+/// START: Sings
+Route::get('sings/{playlistID}', 'SingController@getSings');
+/// END: Sings

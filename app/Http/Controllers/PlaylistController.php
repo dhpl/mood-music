@@ -9,7 +9,6 @@ class PlaylistController extends Controller
 {
     function create(Request $request)
     {
-        // var_dump($request->all());
         $playlist = new Playlist();
         $playlist->name = $request->name;
         $playlist->description = $request->description;

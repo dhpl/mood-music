@@ -24,12 +24,6 @@ Route::get('/admin/albums', function () {
     ]);
 })->name('albums');
 
-Route::get('/admin/sings', function () {
-    return view('admin.sings', [
-        "title" => 'Sings'
-    ]);
-})->name('sings');
-
 /// Start: On boarding
 Route::get('/admin/on-boarding', function () {
     return view('admin.on_boarding', [
@@ -50,3 +44,10 @@ Route::get('/admin/playlists', function () {
 
 Route::post('/create-playlist', 'PlaylistController@create');
 /// END: Playlists
+
+
+/// START: Sings
+Route::get('/admin/sings', 'SingController@index')->name('sings');
+
+Route::post('/create-sing', 'SingController@create');
+/// END: Sings
