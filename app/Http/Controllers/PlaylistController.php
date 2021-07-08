@@ -27,7 +27,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists Featured Success!!',
-            'data' => Playlist::all()->where('has_featured', 1)
+            'data' => Playlist::all()->where('has_featured', 1)->values()
         ]);
     }
 
@@ -36,7 +36,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists Hot Success!!',
-            'data' => Playlist::all()
+            'data' => Playlist::all()->values()
         ]);
     }
 
@@ -45,7 +45,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists For You Success!!',
-            'data' => Playlist::all()
+            'data' => Playlist::all()->values()
         ]);
     }
 
@@ -54,7 +54,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists Popular Success!!',
-            'data' => Playlist::all()
+            'data' => Playlist::all()->values()
         ]);
     }
 }

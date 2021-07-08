@@ -42,7 +42,7 @@ class SingController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Sings Success!!',
-            'data' => $sings
+            'data' => $sings->values()
         ]);
     }
 }

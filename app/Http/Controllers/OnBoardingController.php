@@ -29,7 +29,7 @@ class OnBoardingController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get On Boarding Success!!',
-            'data' => OnBoarding::all()->where('show', 1)
+            'data' => OnBoarding::all()->where('show', 1)->values()
         ]);
     }
 }

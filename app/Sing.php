@@ -23,7 +23,8 @@ class Sing extends Model
         'file_name',
         'created_at',
         'updated_at',
-        'active'
+        'active',
+        'playlist_id'
     ];
 
     protected $appends = [
