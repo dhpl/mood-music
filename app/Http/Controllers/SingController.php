@@ -27,7 +27,7 @@ class SingController extends Controller
         $sing->playlist_id = $request->playlist;
         $file = $request->file;
         $fileName = time() . '.' . $file->getClientOriginalExtension();
-        $destinationPath = public_path('/storage/galeryAudios/');
+        $destinationPath = public_path('/storageAudios/');
         $file->move($destinationPath, $fileName);
         $sing->file_name = $fileName;
         $sing->duration = 0;
