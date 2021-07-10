@@ -33,6 +33,6 @@ class Sing extends Model
 
     public function getFileUrlAttribute()
     {
-        return $this->file_url = asset('/storage/galeryAudios/' . $this->file_name);
+        return $this->file_url = asset('/storageAudios/' . $this->file_name);
     }
 }
