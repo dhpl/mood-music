@@ -25,6 +25,6 @@ class Playlist extends Model
 
     public function getImageCoverUrlAttribute()
     {
-        return $this->image_cover_url = asset('/storage/galeryImages/' . $this->image_cover_name);
+        return $this->image_cover_url = asset('/storageImages/' . $this->image_cover_name);
     }
 }

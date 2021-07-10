@@ -16,7 +16,7 @@ class OnBoardingController extends Controller
         $onBoarding->description = $request->description;
         $image = $request->image;
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/storage/galeryImages/');
+        $destinationPath = public_path('/galeryImages/');
         $image->move($destinationPath, $imageName);
         $onBoarding->image_name = $imageName;
         $onBoarding->show = $request->has('show');

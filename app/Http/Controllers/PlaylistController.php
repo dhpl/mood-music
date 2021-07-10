@@ -15,7 +15,7 @@ class PlaylistController extends Controller
         $playlist->has_featured = $request->has('has_featured');
         $image = $request->image;
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/storage/galeryImages/');
+        $destinationPath = public_path('/storageImages/');
         $image->move($destinationPath, $imageName);
         $playlist->image_cover_name     = $imageName;
         $playlist->save();

@@ -20,7 +20,7 @@ class OnBoarding extends Model
 
     public function getImageUrlAttribute()
     {
-        return $this->image_url = asset('/storage/galeryImages/' . $this->image_name);
+        return $this->image_url = asset('/storageImages/' . $this->image_name);
     }
 
 }
