@@ -32,4 +32,11 @@ class OnBoardingController extends Controller
             'data' => OnBoarding::all()->where('show', 1)->values()
         ]);
     }
+
+    function listOnBoarding()
+    {
+        return view('admin.list_on_boarding', [
+            'onBoardings' => OnBoarding::all(),
+        ]);
+    }
 }

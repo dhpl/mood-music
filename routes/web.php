@@ -48,8 +48,8 @@ Route::group(['middleware' => ['auth']], function () {
             "title" => 'On boarding'
         ]);
     })->name('on_boarding');
-
     Route::post('create-on-boarding', 'OnBoardingController@create');
+    Route::get('/admin/list-on-boarding', 'OnBoardingController@listOnBoarding')->name('list-on-boarding');
     /// End: On Boarding
 
     /// START: Albums

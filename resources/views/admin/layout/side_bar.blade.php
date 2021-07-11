@@ -59,7 +59,7 @@
 
                 <!-- On boarding -->
                 <li class="nav-item">
-                    <a href="{{ route('on_boarding') }}" class="nav-link">
+                    <a href="{{ route('list-on-boarding') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             On boarding
