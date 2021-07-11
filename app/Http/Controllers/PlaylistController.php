@@ -57,4 +57,11 @@ class PlaylistController extends Controller
             'data' => Playlist::all()->values()
         ]);
     }
+
+    function listPlaylist()
+    {
+        return view('admin.list_playlist', [
+            'playlists' => Playlist::all()
+        ]);
+    }
 }

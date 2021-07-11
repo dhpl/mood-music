@@ -70,7 +70,7 @@
 
                 <!-- Playlist -->
                 <li class="nav-item">
-                    <a href="{{ route('playlists') }}" class="nav-link">
+                    <a href="{{ route('list-playlist') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Playlists

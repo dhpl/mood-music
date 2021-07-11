@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
             'title' => 'Playlists'
         ]);
     })->name('playlists');
-
+    Route::get('/admin/list-playlist', 'PlaylistController@listPlaylist')->name('list-playlist');
     Route::post('/create-playlist', 'PlaylistController@create');
     /// END: Playlists
 
