@@ -45,4 +45,11 @@ class SingController extends Controller
             'data' => $sings->values()
         ]);
     }
+
+    public function listSings()
+    {
+        return view('admin.list_sings', [
+            'sings' => Sing::all(),
+        ]);
+    }
 }

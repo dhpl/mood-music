@@ -48,7 +48,7 @@
 
                 <!-- Sings -->
                 <li class="nav-item">
-                    <a href="{{ route('sings') }}" class="nav-link">
+                    <a href="{{ route('list-sings') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Sings

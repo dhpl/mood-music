@@ -28,6 +28,7 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 Route::group(['middleware' => ['auth']], function () {
     /// START: Sings
     Route::get('/admin/sings',  'SingController@index')->name('sings');
+    Route::get('/admin/list-sings', 'SingController@listSings')->name('list-sings');
     Route::post('/create-sing', 'SingController@create');
     /// END: Sings
 
