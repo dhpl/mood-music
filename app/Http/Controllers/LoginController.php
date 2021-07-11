@@ -10,12 +10,11 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        User::create(['name' => 'Admin', 'email' => 'dieuhoangphilongit@gmail.com', 'password' => bcrypt('admin@123'), 'is_admin' => 1]);
-        // $email = $request->email;
-        // $password = $request->password;
-        // if (Auth::attempt(['email' => $email, 'password' => $password])) {
-        //     return redirect('/admin/sings');
-        // }
+        $email = $request->email;
+        $password = $request->password;
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            return redirect('/admin/sings');
+        }
     }
 
     public function checkLogin()
