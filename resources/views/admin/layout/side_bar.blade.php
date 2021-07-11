@@ -78,6 +78,18 @@
                         </p>
                     </a>
                 </li>
+
+                <!-- Logout -->
+                <li class="nav-item">
+                    <a href="{{ route('logout') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Logout
+                            <span class="right badge badge-danger"></span>
+                        </p>
+                    </a>
+                </li>
+                <!--End Logout-->
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
