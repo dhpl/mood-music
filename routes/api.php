@@ -22,8 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('on-boarding', 'OnBoardingController@getAllOnBoarding');
 /// END: On Boarding
 
-
-
 /// START: Playlists
 Route::get('playlists-featured', 'PlaylistController@getPlaylistsFeatured');
 Route::get('playlists-hot', 'PlaylistController@getPlaylistsHot');
@@ -34,3 +32,7 @@ Route::get('playlists-popular', 'PlaylistController@getPlaylistsPopular');
 /// START: Sings
 Route::get('sings/{playlistID}', 'SingController@getSings');
 /// END: Sings
+
+/// START: User
+Route::put('update-fcm', 'UserController@updateFCM');
+/// END: User
