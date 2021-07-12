@@ -36,7 +36,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists Hot Success!!',
-            'data' => Playlist::all()->values()
+            'data' => Playlist::orderBy('created_at', 'DESC')->get()->take(10)->values()
         ]);
     }
 
