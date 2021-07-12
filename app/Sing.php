@@ -35,4 +35,9 @@ class Sing extends Model
     {
         return $this->file_url = asset('/storageAudios/' . $this->file_name);
     }
+
+    public function playlist()
+    {
+        $this->belongsTo('App\Playlist', 'id');
+    }
 }

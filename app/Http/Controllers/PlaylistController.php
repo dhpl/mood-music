@@ -17,7 +17,7 @@ class PlaylistController extends Controller
         $imageName = time() . '.' . $image->getClientOriginalExtension();
         $destinationPath = public_path('/storageImages/');
         $image->move($destinationPath, $imageName);
-        $playlist->image_cover_name     = $imageName;
+        $playlist->image_cover_name = $imageName;
         $playlist->save();
         return back()->with('success', 'Create Playlist Success!!!');
     }
