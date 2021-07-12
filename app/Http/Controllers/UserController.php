@@ -20,7 +20,7 @@ class UserController extends Controller
             $newUser->save();
         } else {
             $user->fcm_token = $fcmToken;
-            $user->save();
+            $user->update();
         }
         return response()->json([
             'success' => true,

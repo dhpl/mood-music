@@ -27,6 +27,7 @@ Route::get('playlists-featured', 'PlaylistController@getPlaylistsFeatured');
 Route::get('playlists-hot', 'PlaylistController@getPlaylistsHot');
 Route::get('playlists-for-you', 'PlaylistController@getPlaylistsForYou');
 Route::get('playlists-popular', 'PlaylistController@getPlaylistsPopular');
+Route::post('update-viewers-playlists', 'PlaylistController@updateViewsPlaylist');
 /// END: Playlists
 
 /// START: Sings

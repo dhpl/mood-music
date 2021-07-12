@@ -64,4 +64,24 @@ class PlaylistController extends Controller
             'playlists' => Playlist::all()
         ]);
     }
+
+    function updateViewsPlaylist(Request $request)
+    {
+        $payload = json_decode($request->getContent(), true);
+        $playlistID = $payload['playlist_id'];
+        $playlist = Playlist::findOrFail($playlistID);
+        if ($playlist == null) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Playlist not found!!!'
+            ], 200);
+        } else {
+            $playlist->viewers = ($playlist->viewers + 1);
+            $playlist->update();
+            return response()->json([
+                'success' => true,
+                'message' => 'Update viewers playlist success!!!'
+            ], 200);
+        }
+    }
 }
