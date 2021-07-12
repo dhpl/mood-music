@@ -54,7 +54,7 @@ class PlaylistController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Get Playlists Popular Success!!',
-            'data' => Playlist::all()->values()
+            'data' => Playlist::inRandomOrder()->get()->take(10)->values()
         ]);
     }
 
