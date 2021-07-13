@@ -37,3 +37,7 @@ Route::get('sings/{playlistID}', 'SingController@getSings');
 /// START: User
 Route::put('update-fcm', 'UserController@updateFCM');
 /// END: User
+
+/// START: Search
+Route::get('search', 'SearchController@search');
+/// END: Search
