@@ -79,6 +79,17 @@
                     </a>
                 </li>
 
+                <!-- Push Notification -->
+                <li class="nav-item">
+                    <a href="{{ route('push-notification') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Push notification
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+
                 <!-- Logout -->
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">

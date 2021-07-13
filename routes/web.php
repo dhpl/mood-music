@@ -59,4 +59,14 @@ Route::group(['middleware' => ['auth']], function () {
         ]);
     })->name('albums');
     /// END: Albums
+
+    /// START: Push Notification
+    Route::get('/admin/push-notification', function () {
+        return view('admin.push_notification', [
+            'title' => 'Push notification'
+        ]);
+    })->name('push-notification');
+    Route::post('/push-notification', 'NotificationController@sendPush');
+    /// END: Push Notification
+
 });
