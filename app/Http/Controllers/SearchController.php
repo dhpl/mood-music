@@ -10,16 +10,19 @@ class SearchController extends Controller
 {
     public function search(Request $request)
     {
-        $playlists = Playlist::all();
-        $sings = Sing::all();
         if ($request->has('text')) {
             $text = $request->get('text');
             return response()->json([
                 'success' => true,
-                'message' => 'Search Empty!!!',
+                'message' => 'Search!!!',
                 'data' => [
-                    'playlists' => $playlists->values(),
-                    'sings' => $sings->values(),
+                    'playlists' => Playlist::query()
+                        ->where('name', 'LIKE', "%{$text}%")
+                        ->get()->values(),
+                    'sings' => Sing::query()
+                        ->where('name', 'LIKE', "%{$text}%")
+                        ->orWhere('singer', 'LIKE', "%{$text}%")
+                        ->get()->values(),
                 ]
             ]);
         }
@@ -27,8 +30,8 @@ class SearchController extends Controller
             'success' => true,
             'message' => 'Search Empty!!!',
             'data' => [
-                'playlists' => $playlists->values(),
-                'sings' => $sings->values(),
+                'playlists' => [],
+                'sings' => [],
             ]
         ]);
     }
