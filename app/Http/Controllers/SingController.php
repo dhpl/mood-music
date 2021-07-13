@@ -25,13 +25,20 @@ class SingController extends Controller
         $sing->singer = $request->singer_name;
         $sing->active = $request->has('active');
         $sing->playlist_id = $request->playlist;
+        /// File MP3
         $file = $request->file;
         $fileName = time() . '.' . $file->getClientOriginalExtension();
         $destinationPath = public_path('/storageAudios/');
         $file->move($destinationPath, $fileName);
         $sing->file_name = $fileName;
-        $sing->duration = 0;
+        /// File Image
+        $fileImage = $request->file_image;
+        $imageName = time() . '.' . $fileImage->getClientOriginalExtension();
+        $destinationPath = public_path('/storageImages/');
+        $fileImage->move($destinationPath, $imageName);
+        $sing->image_name = $imageName;
         // $audioInfo = new Mp3Info($fileName, true);
+        $sing->duration = 0;
         $sing->save();
         return back()->with('success', 'Create Sing Success!!!');
     }

@@ -41,6 +41,19 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputFile">File image</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input name="file_image" type="file" class="custom-file-input"
+                                            id="exampleInputFile" accept=".jpg,.png,.jpeg">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label>Playlists</label>
                                 <select name="playlist" class="form-control">
                                     @foreach ($playlists as $playlist)

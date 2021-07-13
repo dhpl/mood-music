@@ -28,12 +28,18 @@ class Sing extends Model
     ];
 
     protected $appends = [
-        'file_url'
+        'file_url',
+        'image_url'
     ];
 
     public function getFileUrlAttribute()
     {
         return $this->file_url = asset('/storageAudios/' . $this->file_name);
+    }
+
+    public function getImageUrlAttribute()
+    {
+        return $this->image_url = asset('/storageImages/' . $this->image_name);
     }
 
     public function playlist()
