@@ -41,7 +41,7 @@ class NotificationController extends Controller
             $content['image_url'] = $image_url;
         }
 
-        $devicesToken = User::all()->pluck('device_id')->toArray();
+        $devicesToken = User::all()->pluck('fcm_token')->toArray();
         $this->pushMessages($devicesToken, $content, $data);
         return back()->with('success', 'Push Notification Success!!!');
     }
