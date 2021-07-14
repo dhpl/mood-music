@@ -84,4 +84,31 @@ class PlaylistController extends Controller
             ], 200);
         }
     }
+
+    function getAllPlaylist(Request $request)
+    {
+
+        $filter = $request->filter;
+        if ($filter == null) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Get Playlists For You Success!!',
+                'data' => Playlist::all()->values()
+            ]);
+        } else {
+            if ($filter == 'newest') {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Get Playlists Newest Success!!',
+                    'data' => Playlist::orderBy('created_at', 'DESC')->get()->values()
+                ]);
+            } else if ($filter == 'most_listeners') {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Get Playlists Most Listeners Success!!',
+                    'data' => Playlist::orderBy('viewers', 'DESC')->get()->values()
+                ]);
+            }
+        }
+    }
 }
