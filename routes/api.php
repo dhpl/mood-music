@@ -33,6 +33,7 @@ Route::get('all-playlists', 'PlaylistController@getAllPlaylist');
 
 /// START: Sings
 Route::get('sings/{playlistID}', 'SingController@getSings');
+Route::get('all-sings', 'SingController@allSings');
 /// END: Sings
 
 /// START: User

@@ -59,4 +59,13 @@ class SingController extends Controller
             'sings' => Sing::all(),
         ]);
     }
+
+    function allSings()
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'Get Playlists Newest Success!!',
+            'data' => Sing::orderBy('created_at', 'DESC')->get()->values()
+        ]);
+    }
 }
